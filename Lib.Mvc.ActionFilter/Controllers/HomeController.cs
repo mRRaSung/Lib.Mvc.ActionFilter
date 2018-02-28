@@ -17,6 +17,7 @@ namespace Lib.Mvc.ActionFilter.Controllers
 
         //[OutputCache(Duration = 10, Location = System.Web.UI.OutputCacheLocation.ServerAndClient)]
         [OutputCache(CacheProfile = "5_SEC")]
+        [AjaxOnly, BlockIFrame, PreventGoBack]
         [Message]
         public ActionResult About()
         {
