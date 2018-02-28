@@ -1,4 +1,5 @@
 ﻿using Lib.Mvc.ActionFilter.ActionFilters;
+using Lib.Mvc.ActionFilter.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,21 @@ namespace Lib.Mvc.ActionFilter.Controllers
             return View();
         }
 
+        //[OutputCache(Duration = 10, Location = System.Web.UI.OutputCacheLocation.ServerAndClient)]
+        [OutputCache(CacheProfile = "5_SEC")]
         [Message]
         public ActionResult About()
         {
             //ViewBag.Message = "Your application description page.";
 
-            return View();
+            AboutViewModel model = new AboutViewModel
+            {
+                Subject = "Setting OutputCache 5 secs",
+                Description = "OutputCacheLocation.Any",
+                CacheTime = DateTime.Now
+            };
+
+            return View(model);
         }
 
         public ActionResult Contact()
