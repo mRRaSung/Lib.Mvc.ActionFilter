@@ -139,7 +139,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilters\ActionTimerAttribute.cs" />
+    <Compile Include="ActionFilters\AjaxOnlyAttribute.cs" />
+    <Compile Include="ActionFilters\BlockIFrameAttribute.cs" />
+    <Compile Include="ActionFilters\ETagAttribute.cs" />
+    <Compile Include="ActionFilters\ETagFilter.cs" />
     <Compile Include="ActionFilters\MessageAttribute.cs" />
+    <Compile Include="ActionFilters\PreventGoBackAttribute.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -188,6 +194,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Timer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
