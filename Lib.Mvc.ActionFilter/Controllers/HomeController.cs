@@ -16,9 +16,13 @@ namespace Lib.Mvc.ActionFilter.Controllers
         }
 
         //[OutputCache(Duration = 10, Location = System.Web.UI.OutputCacheLocation.ServerAndClient)]
-        [OutputCache(CacheProfile = "5_SEC")]
-        [AjaxOnly, BlockIFrame, PreventGoBack]
-        [Message]
+        //[OutputCache(CacheProfile = "5_SEC")]
+        //[AjaxOnly, BlockIFrame, PreventGoBack]
+        //[Message]
+        //[ETag]
+
+        //[Whitespace]
+        [Compress]
         public ActionResult About()
         {
             //ViewBag.Message = "Your application description page.";
